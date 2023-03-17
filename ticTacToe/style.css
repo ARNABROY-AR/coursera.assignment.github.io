@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Iso&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+
+ nav{
+    color: white;
+    background-color: rgb(12, 7, 55);
+    height: 72px;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    padding: 0 12px 0 12px ;
+    font-family: 'Lobster', cursive;
+}
+nav li{
+    list-style-type:none;
+    margin:auto;
+    /* text-align: center; */
+}
+.gameContainer{
+    height:100vh;
+    background-color: rgb(238, 234, 159);
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;
+
+}
+
+.boxContainer{
+    margin-top: 50px;
+    display: grid;
+    grid-template-rows: repeat(3, 10vw);
+    grid-template-columns: repeat(3, 10vw);
+    /* font-family: 'Rubik Iso'; */
+    font-family: 'Rubik', sans-serif;
+    position: relative;
+
+}
+
+.box{
+    border: 2px solid black;
+    font-size: 8vw;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.boxContainer :hover{
+    /* background-color:rgb(145, 163, 185); */
+    background-color: #b9c6c7;
+    border-radius: 10px;
+    
+}
+.line{
+    background-color:#270a2a ;
+    position:absolute;
+    height: 10px;
+    border-radius: 5px;
+    width: 0vw;
+    transition: width 1s ease-in-out;
+}
+.infoBar{
+    margin-top: 6vh;
+}
+.info{
+    font-size: 20px;
+    /* font-family: 'Dancing Script', cursive; */
+}
+.gameInfo{
+    padding: 0 34px ;
+    margin: 0;
+    margin-top: 50px;
+    font-family: 'Edu NSW ACT Foundation', cursive;
+}
+.gameInfo h1{
+    font-size: 2.5rem;
+
+}
+.imgBox{
+    position: relative;
+}
+.xWin {
+    position: absolute;
+       width: 0;
+       transition: width 1s ease-in-out ;
+}
+.yWin {
+    position: absolute;
+    width: 0px;
+    transition: width 1s ease-in-out;
+
+}
+#reset{
+    /* box-shadow: inset; */
+    margin: 0 23px ;
+    padding: 1px 18px;
+    font-size: 15px;
+    background: rgb(222, 201, 222);
+    cursor: pointer;
+    border-radius: 6px;
+    font-family: 'Baloo Bhaina 2';
+    font-weight: bolder;
+    
+}
+
+.br-0{
+    border-right: 0;
+}
+.bl-0{
+    border-left: 0;
+}
+.bt-0{
+    border-top: 0;
+}
+.bb-0{
+    border-bottom: 0;
+}
+
+@media screen and (max-width: 950px)
+{
+    .gameContainer{
+        flex-wrap: wrap;
+
+    }
+    .gameInfo{
+        margin-top:-10vh;
+    }
+    .gameInfo h1{
+        font-size: 2vm;
+
+    }
+    .boxContainer{
+        padding-bottom: 0;
+        display: grid;
+        grid-template-rows: repeat(3, 20vw);
+        grid-template-columns: repeat(3, 20vw);
+    }
+    
+}
+@media screen and (max-width: 430px)
+{
+    nav{
+        height: 100px;
+        font-size: 25px;
+
+    }
+}
